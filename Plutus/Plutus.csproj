@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDE9A0D1-EBA3-45DF-9125-B47E325E9B0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Plutus</RootNamespace>
+    <AssemblyName>Plutus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Compressed\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContaintForm.Designer.cs">
+      <DependentUpon>ContaintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserAddressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserAddressForm.Designer.cs">
+      <DependentUpon>NewUserAddressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlutusDBLayer.cs" />
+    <Compile Include="PlutusMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlutusMainForm.Designer.cs">
+      <DependentUpon>PlutusMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserRegistrationForm.Designer.cs">
+      <DependentUpon>NewUserRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContaintForm.resx">
+      <DependentUpon>ContaintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserAddressForm.resx">
+      <DependentUpon>NewUserAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlutusMainForm.resx">
+      <DependentUpon>PlutusMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserRegistrationForm.resx">
+      <DependentUpon>NewUserRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1177568.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11775681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11775682.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 2-100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 6-100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 8-100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 9-100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 10%402x-100.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txtBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emailtxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmbtxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonetxt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonetxt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidemenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidemenu_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\747896.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1057168.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\748065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidemenu_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyeX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\545806.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electronics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Essentials for Gamers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plutusBasic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 19%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computers and Accesseries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computers1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oculus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hot Deals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sweatshirts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cardigans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Easy tess.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Joggers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computers2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Headsets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboards.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer Mice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chairs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop Toys and Games.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop computers and Accessories.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sidebar Blured.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScribbledBlured.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconComputers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconComputers1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartHome1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arts and Crafts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automotive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11775683.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gift card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giftCardByMail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plutusGames.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingCart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingCart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programAndFeatures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpAndSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SimpleBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
